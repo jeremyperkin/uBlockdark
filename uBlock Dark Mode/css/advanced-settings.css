@@ -1,0 +1,20 @@
+html {
+    height: 100vh;
+    overflow: hidden;
+    }
+body {
+    background-color: #999;
+    color: #000;
+    overflow: hidden;
+    }
+#advancedSettings {
+    border-top: 1px solid #999;
+    color: #000;
+    background-color: #999;
+    height: 75vh;
+    text-align: left;
+    width: 100%;
+    }
+.CodeMirror-wrap pre {
+    word-break: break-all;
+    }
