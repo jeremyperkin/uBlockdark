@@ -136,13 +136,13 @@ p {
     padding: 0;
     }
 #switch .fa-icon:hover {
-    fill: #111;
+    fill: #ff9a9a;
     }
 body.off #switch .fa-icon {
     fill: var(--off);
     }
 body.off #switch .fa-icon:hover {
-    fill: #00b300;
+    fill: #9affff;
     }
 #basicTools {
     margin: 1.2em 0 0.5em 0;
