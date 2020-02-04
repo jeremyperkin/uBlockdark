@@ -1,16 +1,23 @@
+:root {
+    --border-adv-set: #999;
+    --text-1: #ccc;
+    --border-1: #000;
+}
+
+
 html {
     height: 100vh;
     overflow: hidden;
     }
 body {
-    background-color: #999;
-    color: #000;
+    /*background-color: #999;*/
+    color: var(--text-1);
     overflow: hidden;
     }
 #advancedSettings {
-    border-top: 1px solid #999;
-    color: #000;
-    background-color: #999;
+    border-top: 1px solid var(--border-1);
+    color: var(--text-1);
+    background-color: var(--border-adv-set);
     height: 75vh;
     text-align: left;
     width: 100%;

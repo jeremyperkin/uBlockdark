@@ -1,6 +1,38 @@
+:root {
+    --background-popup: #000;
+    --uBlock-enabled: #8ad;
+    --off: #444;
+    --click-off: #ff9a9a;
+    --click-on: #8ad;
+    --basic-tools-icons: #ccc;
+    --extra-tools-bg: #000;
+    --extra-tools-icons: #888;
+    --header-1: #444;
+    --text-head-1: #EEE;
+    --header-2: #888;
+    --text-blocked-vals: #CCC;
+    --icon-active: #8ad;
+    --icon-hover: #8ab;
+    --icon-fill: #000;
+    --firewall-bg: #333;
+    --firewall-hov-bg: #444;
+    --firewall-text: #EEE;
+    --firewall-text-hover: #999; 
+    --firewall-border: #000;
+    --refresh-icon-fill: #000;
+    --refresh-hov: #333333;
+    --lock-eraser-refresh-bg: #999999;
+    --ab-count: #888888;
+    --border1: #333333;
+    --border2: #111111;
+    --ruleset-bg: #999999;
+    --ruleset-fill: #888888;
+ }
+
+
 body {
-    background-color: #222;
-    color: #ccc;
+    background-color: var(--background-popup);
+    color: var(--text-blocked-vals);
     border: 0;
     display: flex;
     flex-direction: column;
@@ -14,9 +46,9 @@ body {
     }
 
 h2 {
-    background-color: #444;
+    background-color: var(--header-1);
     border: 0;
-    color: #eee;
+    color: var(--text-head-1);
     cursor: pointer;
     font-size: 100%;
     font-weight: normal;
@@ -24,7 +56,7 @@ h2 {
     text-align: center;
     }
 a {
-    background-color: #444;
+    background-color: var(--header-1);
     color: #666;
     text-decoration: none;
     }
@@ -33,9 +65,9 @@ a {
     }
 #appinfo {
     align-items: flex-end;
-    background-color: #666;
+    background-color: #000;
     border: 0;
-    color: #bbb;
+    color: #ccc;
     display: flex;
     font-size: smaller;
     justify-content: center;
@@ -98,17 +130,21 @@ p {
     margin: 0.8em 0;
     }
 #switch .fa-icon {
-    fill: #0046ff;
+    fill: var(--icon-active);
     cursor: pointer;
     font-size: 700%;
     margin: 0;
     padding: 0;
     }
 #switch .fa-icon:hover {
-    opacity: 0.9;
+    fill: var(--click-off)
     }
 body.off #switch .fa-icon {
-    fill: #555;
+    fill: var(--off);
+    }
+/*add below to see if it was something that is wanted*/
+body.off #switch .fa-icon:hover {
+    fill: var(--click-on);
     }
 #basicTools {
     margin: 1.2em 0 0.5em 0;
@@ -117,9 +153,9 @@ body.off #switch .fa-icon {
     margin-left: 0;
     }
 .tool {
-    color: #999;
+    color: var(--basic-tools-icons);
     cursor: pointer;
-    fill: #aaa;
+    fill: var(--basic-tools-icons);
     margin-left: 0.8em;
     min-width: 1em;
     padding: 0 0.2em;
@@ -130,14 +166,14 @@ body.off #switch .fa-icon {
     visibility: visible;
     }
 .tool.enabled:hover {
-    color: #8ad;
-    fill: #8ad;
+    color: var(--icon-hover);
+    fill: var(--icon-active);
     }
 #page-blocked {
     font-size: 1.25em;
     }
 .statName {
-    color: #888;
+    color: var(--extra-tools-sub-icon);
     font-size: 85%;
     margin: 0.8em 0.2em 0.4em 0.2em;
     }
@@ -145,11 +181,11 @@ body.off #switch .fa-icon {
     margin: 0;
     }
 #extraTools {
-    background-color: #222;
+    background-color: var(--extra-tools-bg);
     border: 0;
-    color: #888;
+    color: var(--extra-tools-icons);
     display: flex;
-    fill: #888;
+    fill: var(--extra-tools-icons);
     justify-content: center;
     margin: 0.8em 0 0 0;
     padding: 0.2em 0;
@@ -158,7 +194,7 @@ body.responsive #extraTools {
     justify-content: space-evenly;
     }
 #extraTools > span {
-    color: #8ad;
+    color: var(--icon-active);
     cursor: pointer;
     font-size: 1.2em;
     margin: 0 0.8em 0 0;
@@ -180,17 +216,17 @@ body.responsive #extraTools {
     visibility: visible;
     }
 #extraTools > span:hover {
-    color: #8ad;
-    fill: #8ad;
+    color: var(--icon-hover);
+    fill: var(--icon-active);
     }
 
 #refresh {
-    background-color: #ffe;
-    border: 1px solid #111;
+    background-color: var(--lock-eraser-refresh-bg);
+    border: 1px solid var(--border1);
     border-radius: 4px;
     cursor: pointer;
     display: none;
-    fill: #888;
+    fill: var(--icon-fill);
     font-size: 3em;
     justify-content: center;
     left: 4px;
@@ -203,14 +239,14 @@ body.dirty #refresh {
     display: flex;
     }
 body.dirty #refresh:hover {
-    fill: #000
+    fill: var(--refresh-hov)
     }
 
 #tooltip {
-    background-color: #ccc;
-    border: 1px solid #111;
+    background-color: var(--text-blocked-vals);
+    border: 1px solid var(--border1);
     border-radius: 3px;
-    box-shadow: 1px 1px 3px gray;
+    box-shadow: 1px 2px 2px gray;
     box-sizing: border-box;
     color: black;
     cursor: pointer;
@@ -247,14 +283,14 @@ body[dir="rtl"] #tooltip {
     text-align: right;
     }
 #firewallContainer > div {
-    background-color: #333;
+    background-color: var(--firewall-bg);
     border: 0;
     direction: ltr;
     margin: 0;
     padding: 0;
     }
 #firewallContainer > div:hover {
-    background-color: #444;
+    background-color: var(--firewall-hov-bg);
     }
 #firewallContainer > div:first-child ~ div:not([class]) {
     display: none;
@@ -265,10 +301,9 @@ body[dir="rtl"] #tooltip {
 #firewallContainer > div > span {
     background-color: transparent;
     border: none;
-    border-bottom: 1px solid #666;
+    border-bottom: 1px solid var(--border2);
     box-sizing: border-box;
     -moz-box-sizing: border-box;
-    color: #000;
     display: inline-block;
     height: 1.9em;
     line-height: 1.9;
@@ -280,15 +315,15 @@ body[dir="rtl"] #tooltip {
     cursor: pointer;
     }
 #firewallContainer > div > span:first-of-type {
-    color: #eee;
-    border-bottom: 1px solid #111;
+    color: var(--firewall-text);
+    border-bottom: 1px solid var(--border2);
     padding-right: 2px;
     position: relative;
     text-overflow: ellipsis;
     width: calc(100% - 4em);
     }
 #firewallContainer > div > span:first-of-type > sup {
-    color: #666;
+    color: var(--firewall-text);
     display: none;
     font-size: 80%;
     font-weight: normal;
@@ -304,12 +339,12 @@ body[dir="rtl"] #tooltip {
     display: none;
     }
 #firewallContainer > div > span:first-of-type ~ span {
-    border-left: 1px solid #111;
+    border-left: 1px solid var(--border2);
     width: 4em;
     }
 #firewallContainer > div > span:nth-of-type(3),
 #firewallContainer > div > span:nth-of-type(4) {
-    color: #444;
+    color: var(--firewall-hov-bg);
     text-align: center;
     }
 #firewallContainer > div > span:nth-of-type(4) {
@@ -319,7 +354,7 @@ body[dir="rtl"] #tooltip {
     font-weight: bold;
     }
 #firewallContainer > div:first-of-type > span:first-of-type::before {
-    color: #aaa;
+    color: var(--firewall-hov-bg);
     content: '\2012';
     padding-right: 0.25em;
     }
@@ -334,6 +369,7 @@ body[dir="rtl"] #tooltip {
     }
 #firewallContainer > div > span[data-acount]::before,
 #firewallContainer > div > span[data-bcount]::after {
+    color: var(--ab-count);
     font-family: monospace;
     position: absolute;
     }
@@ -387,7 +423,7 @@ body.advancedUser #firewallContainer > div > span:first-of-type ~ span {
     display: inline-block;
     height: 100%;
     left: 0;
-    opacity: 0.4;
+    opacity: 0;
     position: absolute;
     width: 7px;
     }
@@ -497,7 +533,6 @@ body.advancedUser #firewallContainer > div > span.noopRule.ownRule {
 #rulesetTools {
     background-color: transparent;
     border: 0;
-    fill: #888;
     display: none;
     left: 4px;
     padding: 0;
@@ -505,8 +540,9 @@ body.advancedUser #firewallContainer > div > span.noopRule.ownRule {
     top: 4px;
     }
 #rulesetTools > span {
-    background-color: #ffe;
-    border: 1px solid #ddc;
+    background-color: var(--ruleset-bg);
+    border: 1px solid var(--firewall-border);
+    fill: var(--ruleset-fill);
     border-radius: 4px;
     cursor: pointer;
     display: inline-block;

@@ -1,3 +1,19 @@
+:root {
+    --dashboard-navbar-bg: #000;
+    --dashboard-nav-bar: #ccc;
+    --dashboard-nav-border: #666;
+    --dashboard-tabs-border: #444;
+    --tab-select: #222;
+    --tab-select-border: #222;
+    --sub-bg: #eee;
+    --border-1: #222;
+    --border-2: #222;
+    --text-1: #eee;
+    --box-shadow: #444;
+}
+
+
+
 html, body {
     margin: 0;
     border: 0;
@@ -22,8 +38,8 @@ html, body {
     }
 #dashboard-nav-widgets {
     align-items: stretch;
-    background-color: #999;
-    border-bottom: 1px solid #999;
+    background-color: var(--border-2);
+    border-bottom: 1px solid var(--dashboard-nav-border);
     display: flex;
     margin: 0;
     padding: 4px 0 0;
@@ -39,12 +55,12 @@ html, body {
     width: 100%;
     }
 .tabButton {
-    background-color: #eee;
-    border: 1px solid #ccc;
+    background-color: var(--dashboard-tabs-border);
+    border: 1px solid var(--dashboard-tabs-border);
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
-    border-bottom: 1px solid #ccc;
-    color: black;
+    border-bottom: 1px solid var(--dashboard-nav-border);
+    color: var(--text-1);
     cursor: pointer;
     display: inline-block;
     font-size: 110%;
@@ -62,8 +78,8 @@ html, body {
     color: inherit;
     }
 .tabButton.selected {
-    background-color: white;
-    border-bottom: 1px solid white;
+    background-color: var(--tab-select);
+    border-bottom: 1px solid var(--tab-select-border);
     }
 iframe {
     background-color: transparent;
@@ -73,7 +89,7 @@ iframe {
     width: 100%;
     }
 #unsavedWarning {
-    box-shadow: rgba(128,128,128,0.4) 0 4px 4px;
+    box-shadow: var(--box-shadow) 0 4px 4px;
     display: none;
     left: 0;
     position: absolute;
@@ -84,7 +100,7 @@ iframe {
     display: initial;
     }
 #unsavedWarning > div:first-of-type {
-    background-color: #ffffcc;
+    background-color: var(--sub-bg);
     padding: 0.5em;
     }
 #unsavedWarning > div:last-of-type {
@@ -111,6 +127,6 @@ body:not(.canUpdateShortcuts) .tabButton[href="#shortcuts.html"] {
         font-size: 90%;
         }
     .tabButton.selected {
-        border-bottom: 1px solid #ccc;
+        border-bottom: 1px solid var(--border-1);
         }
     }

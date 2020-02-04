@@ -167,7 +167,7 @@ body.updating .listEntry.obsolete > input[type="checkbox"]:checked ~ span.updati
     display: inline-block;
     }
 .listEntry.toImport > input[type="checkbox"] ~ textarea {
-    border: 1px solid #ccc;
+    border: 1px solid #999;
     box-sizing: border-box;
     display: block;
     font-size: smaller;

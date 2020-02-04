@@ -1,10 +1,15 @@
+:root{
+    --bg: #999;
+    --advuser-icon: #8ad;
+}
+
 ul {
     padding-left: 1em;
     padding-right: 0;
     }
 body[dir="rtl"] ul {
-    background-color: #222;
-    color: #888;
+    /*background-color: #444;*/
+    color: var(--bg);
     padding-left: 0;
     padding-right: 1em;
     }
@@ -29,8 +34,7 @@ ul#userSettings .subgroup > span {
     display: none;
     }
 body.advancedUser #advanced-user-enabled ~ a.fa {
-    background-color: #222;
-    color: #888;
+    color: var(--advuser-icon);
     display: inline;
     }
 #localData > ul > li {

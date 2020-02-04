@@ -1,3 +1,10 @@
+:root {
+    --merge1: #888;
+    --merge: #999;
+    --icon: #ccc;
+    --border-1: #000;
+ }
+
 html {
     height: 100vh;
     overflow: hidden;
@@ -9,7 +16,7 @@ body {
     }
 #diff {
     border: 0;
-    border-top: 1px solid #eee;
+    border-top: 1px solid var(--border-1);
     flex-grow: 1;
     margin: 0;
     padding: 0;
@@ -40,7 +47,7 @@ body {
     text-align: center;
     }
 #ruleFilter .fa {
-    color: #888;
+    color: var(--icon);
     }
 #revertButton,
 #commitButton,
@@ -68,10 +75,10 @@ body {
     display: none;
     }
 #diff.editing .CodeMirror-merge-left .CodeMirror {
-    color: #888;
+    color: var(--merge1);
     }
 #diff.editing .CodeMirror-merge-editor .CodeMirror {
-    background-color: #ffe;
+    background-color: var(--merge);
     }
 body[dir="rtl"] .CodeMirror-merge-pane-rightmost {
     right: unset;

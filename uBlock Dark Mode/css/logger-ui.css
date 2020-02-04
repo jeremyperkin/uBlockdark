@@ -1,7 +1,28 @@
+:root {
+    --dialog-windows-bg: #222;
+    --dialog-windows-border: #222;
+    --dialog-tabtext: #ccc;
+    --dialog-bodytext: #ccc;
+    --logger-rule-popup: #666;
+    --logger-result-text: #ccc;
+    --logger-text: #ccc;
+    --logger-bg: #222;
+    --logger-border: #666;
+    --logger-body: #888;
+    --logger-toolbar-bg: #999;
+    --logger-overlay: #777;
+    --logger-icon-active: #526c9c;
+    --logger-icon-hover: #728cbb;
+    --logger-flex-border: #222;
+    --logger-border3: #222;
+    --logger-border2: #222;
+    --logger-border1: #222;
+}
+
 body {
-    background-color: #222;
+    background-color: var(--logger-bg);
     border: 0;
-    color: #888;
+    color: var(--logger-result-text);
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -17,8 +38,8 @@ textarea {
     width: 100%;
     }
 .permatoolbar {
-    background-color: #999;
-    color: #000;
+    background-color: var(--logger-toolbar-bg);
+    color: var(--logger-text);
     border: 0;
     box-sizing: border-box;
     display: flex;
@@ -37,10 +58,10 @@ textarea {
     padding: 0.25em;
     }
 .permatoolbar .button.active {
-    fill: steelblue;
+    fill: var(--logger-icon-active);
     }
 .permatoolbar .button:hover {
-    background-color: steelblue;
+    background-color: var(--logger-icon-hover);
     }
 #pageSelector {
     padding: 0.25em 0;
@@ -78,7 +99,7 @@ body[dir="rtl"] #pageSelector {
     font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     }
 .inspector {
-    border-top: 1px solid #666;
+    border-top: 1px solid var(--logger-border);
     display: flex;
     flex-direction: column;
     }
@@ -109,7 +130,7 @@ body[dir="rtl"] #pageSelector {
 }
 #netInspector.paused #pause > span:last-of-type {
     display: inline-flex;
-    fill: steelblue;
+    fill: var(--logger-icon-active);
 }
 #netInspector #filterExprGroup {
     display: flex;
@@ -123,7 +144,7 @@ body[dir="rtl"] #pageSelector {
     opacity: 1;
     }
 #netInspector #filterInput {
-    border: 1px solid gray;
+    border: 1px solid var(--logger-border);
     display: inline-flex;
     }
 #netInspector #filterInput > input {
@@ -140,9 +161,9 @@ body[dir="rtl"] #pageSelector {
     transform: scaleY(1);
     }
 #netInspector #filterExprPicker {
-    background-color: #999;
-    color: #000;
-    border: 1px solid #000;
+    background-color: var(--logger-toolbar-bg);
+    color: var(--logger-text);
+    border: 1px solid var(--logger-border3);
     display: none;
     position: absolute;
     flex-direction: column;
@@ -161,7 +182,7 @@ body[dir="rtl"] #netInspector #filterExprPicker {
     display: flex;
     }
 #netInspector #filterExprPicker > div {
-    border: 1px solid #ddd;
+    border: 1px solid var(--logger-border3);
     border-left: 0;
     border-right: 0;
     display: flex;
@@ -193,8 +214,8 @@ body[dir="rtl"] #netInspector #filterExprPicker {
     border: 1px solid darkgray;
     }
 #netInspector #filterExprPicker span.on[data-filtex] {
-    background-color: steelblue;
-    border: 1px solid steelblue;
+    background-color: var(--logger-icon-active);
+    border: 1px solid var(--logger-icon-active);
     }
 
 #netInspector .vscrollable {
@@ -271,7 +292,7 @@ body.colorBlind #vwRenderer .logEntry > div.redirect {
     background-color: rgba(0, 19, 110, 0.1);
     }
 #vwRenderer .logEntry > div[data-type="tabLoad"] {
-    background-color: #666;
+    background-color: #eee;
     color: white;
     }
 #vwRenderer .logEntry > div[data-type="error"] {
@@ -288,7 +309,7 @@ body.colorBlind #vwRenderer .logEntry > div.redirect {
     }
 
 #vwRenderer .logEntry > div > span {
-    border: 1px solid #666;
+    border: 1px solid var(--logger-border);
     border-top: 0;
     border-right: 0;
     box-sizing: border-box;
@@ -404,7 +425,7 @@ body.colorBlind #netFilteringDialog > .panes > .details > div[data-status="2"] b
     background-color: rgba(255, 194, 57, 0.2);
     }
 #vwRenderer .logEntry > div > span:nth-of-type(7) a {
-    background-color: dimgray;
+    background-color: var(--dialog-windows-bg);
     color: white;
     display: none;
     height: 100%;
@@ -448,9 +469,9 @@ body.colorBlind #netFilteringDialog > .panes > .details > div[data-status="2"] b
     }
 
 #popupContainer {
-    background-color: #222;
-    color: #666;
-    border: 1px solid gray;
+    background-color: var(--logger-bg);
+    color: var(--logger-rule-popup);
+    border: 1px solid var(--logger-border2);
     bottom: 0;
     box-sizing: border-box;
     display: none;
@@ -465,7 +486,6 @@ body.colorBlind #netFilteringDialog > .panes > .details > div[data-status="2"] b
 
 #modalOverlay {
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
     border: 0;
     bottom: 0;
     display: none;
@@ -484,8 +504,8 @@ body.colorBlind #netFilteringDialog > .panes > .details > div[data-status="2"] b
     position: relative;
     }
 #modalOverlay > div > div:nth-of-type(1) {
-    background-color: #999;
-    color: #222;
+    background-color: var(--dialog-windows-bg);
+    color: var(--dialog-bodytext);
     border: 0;
     box-sizing: border-box;
     padding: 1em;
@@ -500,8 +520,8 @@ body.colorBlind #netFilteringDialog > .panes > .details > div[data-status="2"] b
     width: 1.6em;
     height: 1.6em;
     bottom: calc(100% + 2px);
-    background-color: #999;
-    color: #222;
+    background-color: var(--dialog-windows-bg);
+    color: var(--logger-bg);
     }
 body[dir="ltr"] #modalOverlay > div > div:nth-of-type(2) {
     right: 0;
@@ -534,19 +554,19 @@ body[dir="rtl"] #modalOverlay > div > div:nth-of-type(2) {
     background-image:
         linear-gradient(
             45deg,
-            #666 10%,
+            var(--logger-rule-popup) 10%,
             transparent 10%,
             transparent 75%,
-            #666 75%,
-            #666
+            var(--logger-rule-popup) 75%,
+            var(--logger-rule-popup)
         ),
         linear-gradient(
             45deg,
-            #666 25%,
+            var(--logger-rule-popup) 25%,
             transparent 25%,
             transparent 75%,
-            #666 75%,
-            #666
+            var(--logger-rule-popup) 75%,
+            var(--logger-rule-popup)
         );
     background-position:0 0, 9px 9px;
     background-size: 18px 18px;
@@ -562,23 +582,23 @@ body[dir="rtl"] #modalOverlay > div > div:nth-of-type(2) {
     }
 #netFilteringDialog > .preview > span {
     background-color: #333;
-    color: #999;
+    color: var(--dialog-windows-bg);
     cursor: pointer;
     padding: 0.5em;
     }
 
 #netFilteringDialog > .headers {
-    border-bottom: 1px solid #888;
+    border: 0px solid var(--logger-border);
     line-height: 2;
     position: relative;
     }
 #netFilteringDialog > .headers > .header {
-    background-color: #666;
+    background-color: var(--logger-rule-popup);
     border: 1px solid #aaa;
-    border-bottom: 1px solid #888;
+    border-bottom: 1px solid var(--logger-border2);
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
-    color: #222;
+    color: var(--logger-bg);
     cursor: pointer;
     display: inline-block;
     padding: 0 1em;
@@ -589,10 +609,10 @@ body[dir="rtl"] #modalOverlay > div > div:nth-of-type(2) {
 #netFilteringDialog[data-pane="details"] > .headers > [data-pane="details"],
 #netFilteringDialog[data-pane="dynamic"] > .headers > [data-pane="dynamic"],
 #netFilteringDialog[data-pane="static"] > .headers > [data-pane="static"] {
-    background-color: #222;
-    border-color: #888;
-    border-bottom: 1px solid #222;
-    color: #666;
+    background-color: var(--logger-bg);
+    border-color: var(--logger-body);
+    border-bottom: 1px solid var(--logger-border);
+    color: var(--logger-rule-popup);
     }
 #netFilteringDialog > .headers > .tools {
     bottom: 0;
@@ -639,9 +659,8 @@ body[dir="rtl"] #netFilteringDialog > .headers > .tools {
     }
 #netFilteringDialog > .panes > .details > div {
     align-items: stretch;
-    background-color: #999;
+    background-color: var(--logger-overlay);
     border: 0;
-    border-bottom: 1px solid #999;
     display: flex;
     }
 #netFilteringDialog > .panes > .details > div > span {
@@ -655,10 +674,10 @@ body[dir="rtl"] #netFilteringDialog > .headers > .tools {
     width: 8em;
     }
 body[dir="ltr"] #netFilteringDialog > .panes > .details > div > span:nth-of-type(1) {
-    border-right: 1px solid #000;
+    border-right: 1px solid var(--logger-border1);
     }
 body[dir="rtl"] #netFilteringDialog > .panes > .details > div > span:nth-of-type(1) {
-    border-left: 1px solid #000;
+    border-left: 1px solid var(--logger-border1);
     }
 #netFilteringDialog > .panes > .details > div > span:nth-of-type(2) {
     flex-grow: 1;
@@ -679,7 +698,7 @@ body[dir="rtl"] #netFilteringDialog > .panes > .details > div > span:nth-of-type
     }
 #netFilteringDialog > .panes > .details .exceptor {
     align-items: center;
-    border-left: 1px solid #000;
+    border-left: 1px solid var(--logger-border1);
     cursor: pointer;
     display: inline-flex;
     font-family: monospace;
@@ -692,7 +711,7 @@ body[dir="rtl"] #netFilteringDialog > .panes > .details > div > span:nth-of-type
     text-decoration: line-through;
     }
 #netFilteringDialog > .panes > .details .exceptored .exceptor {
-    background-color: lightblue;
+    background-color: var(--logger-icon-hover);
     }
 #netFilteringDialog > .panes > .details .exceptor::before {
     content: '#@#';
@@ -714,10 +733,10 @@ body[dir="rtl"] #netFilteringDialog > .panes > .details > div > span:nth-of-type
     width: 4.5em;
     }
 body[dir="ltr"] #netFilteringDialog > div.panes > .dynamic .row > span:nth-of-type(1) {
-    border-right: 1px solid #999;
+    border-right: 1px solid var(--logger-border1);
     }
 body[dir="rtl"] #netFilteringDialog > div.panes > .dynamic .row > span:nth-of-type(1) {
-    border-left: 1px solid #999;
+    border-left: 1px solid var(--logger-border1);
     }
 #netFilteringDialog > div.panes > .dynamic .row > span:nth-of-type(2) {
     align-self: center;
@@ -743,9 +762,9 @@ body.dirty #netFilteringDialog > div.panes > .dynamic > .toolbar #saveRules {
     display: none;
     }
 #netFilteringDialog > div.panes > .dynamic .entry {
-    background-color: #999;
+    background-color: var(--logger-overlay);
     border: 0;
-    border-bottom: 1px solid #000;
+    border: 1px solid var(--logger-border1);
     }
 #netFilteringDialog > div.panes > .dynamic .entry:hover {
     background-color: #f0f0f0;
@@ -845,7 +864,7 @@ body.colorBlind  #netFilteringDialog > div.panes > .dynamic .entry > .action > .
     word-break: break-all;
     }
 #filterFinderDialog code {
-    background: #999;
+    background: var(--logger-overlay);
     font-size: 85%;
     padding: 3px;
     unicode-bidi: plaintext;
@@ -912,7 +931,7 @@ body.colorBlind  #netFilteringDialog > div.panes > .dynamic .entry > .action > .
     display: inline-flex;
     }
 #loggerExportDialog .options span[data-i18n] {
-    border: 1px solid #999;
+    border: 1px solid var(--logger-flex-border);
     cursor: pointer;
     font-size: 90%;
     margin: 0;
@@ -920,11 +939,11 @@ body.colorBlind  #netFilteringDialog > div.panes > .dynamic .entry > .action > .
     white-space: nowrap;
     }
 #loggerExportDialog .options span[data-i18n]:hover {
-    background-color: lightsteelblue;
+    background-color: var(--logger-icon-hover);
     }
 #loggerExportDialog .options span.on[data-i18n],
 #loggerExportDialog .options span.pushbutton:active {
-    background-color: steelblue;
+    background-color: var(--logger-icon-active);
     }
 #loggerExportDialog .output {
     font: smaller mono;
@@ -936,8 +955,8 @@ body.colorBlind  #netFilteringDialog > div.panes > .dynamic .entry > .action > .
 #loggerSettingsDialog {
     display: flex;
     flex-direction: column;
-    background-color: #999;
-    color: #000;
+    background-color: var(--logger-overlay);
+    color: var(--logger-text);
     margin: 0;
     }
 #loggerSettingsDialog > div {

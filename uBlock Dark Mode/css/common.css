@@ -1,3 +1,5 @@
+/*dark theme - still testing will update*/
+
 @font-face {
     font-family: 'FontAwesome';
     font-weight: normal;
@@ -15,8 +17,8 @@
       -webkit-user-select: none;
     }
 body {
-    background-color: #999;
-    color: black;
+    background-color: #000;
+    color: #eee; /**handles tab text color**/
     font: 14px sans-serif;
     }
 code {

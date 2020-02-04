@@ -1,0 +1,83 @@
+
+
+:root {
+/*popup.css*/
+--background-popup: #000
+--uBlock-enabled: steelblue (728cbb)
+--basic-tools-icons: #ccc
+--extra-tools-bg: #000
+--extra-tools-icons: #888
+--header-1: #444
+--text-head-1: #eee
+--header-2: #888
+--text-blocked-vals: #ccc
+--firewall-bg: #333
+--firewall-text: #eee
+--firewall-text-hover 
+--firewall-border: #000
+--refresh-icon-fill: #000
+--lock-eraser-refresh-bg: #999
+--ab-count: #888
+/*dashboard.css*/
+--dashboard-navbar-bg: #000;
+--dashboard-nav-bar: #ccc;
+--dashboard-nav-border: #666;
+--dashboard-tabs-border: #666;
+--tab-select: #222;
+--tab-select-border: #222;
+--sub-bg: #eee;
+--border-1: #222;
+--border-2: #222;
+--text-1: #eee;
+--box-shadow: #444;
+/**dashboard-common.css**/
+--dashboard-bg: #222;
+--sub-bg: #999;
+--border-1: #222;
+--border-2: #555;
+--text-1: #ccc;
+/**advanced-settings.css**/
+--border-adv-set: #999;
+--text-1: #ccc;
+--border-1: #000;
+/**codemirror.css**/
+--search-bg: #222;
+--icon: #8ab;
+--icon-hover: steelblue;
+--searchnum-result: #8ad;
+/**logger-ui.css**//
+--dialog-windows-bg: #999;
+--dialog-windows-border: #999;
+--logger-rule-popup: #666;
+--logger-result-text: #999;
+--logger-text: #000;
+--logger-bg: #222;
+--logger-border: #666;
+--logger-body: #888;
+--logger-toolbar-bg: #999;
+--logger-overlay: #999;
+--logger-icon-active: #526c9c;
+--logger-icon-hover: #728cbb;
+--logger-flex-border: #999;
+--logger-border2: #888;
+--logger-border1: #222;
+--logger-border3: #000;
+/**dyna-rules.css**/
+--merge1: #888;
+--merge: #999;
+--icon: #000;
+--border-2: #000;
+/**lib/codemirror/addon/merge.css**/
+--border: #999;
+--bg-border: #999;
+--scroll-lock: #000;
+/**settings.css**/
+--bg: #999;
+--advuser-icon: #8ad;
+/**lib/codemirror/lib/codemirror**/
+--bg-myfilters-rules: #ccc;
+--border: #222;
+--border-gutter: #999;
+--line-nums: #ccc; /*line numbers found in myfilters,myrules,whitelist*/
+--myrulestext: #000; /*affects myfilters body text*/
+}
