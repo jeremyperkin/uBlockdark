@@ -14,19 +14,33 @@ Everything has been tested and appears to be what I hope to be incorportated ful
 Feel free to add your comments or wish list.
 
 1.24.2_0/epicker.html
+
 1.24.2_0/varDark.css
+
 1.24.2_0/codemirror/addon/merge/merge.css
+
 1.24.2_0/codemirror/lib/codemirror.css
+
 1.24.2_0/css/3p-filters.css (this may not have been touched - added in case :)
+
 1.24.2_0/css/advanced-settings.css
+
 1.24.2_0/css/codemirror.css
+
 1.24.2_0/css/common.css
+
 1.24.2_0/css/dashboard-common.css
+
 1.24.2_0/css/dashboard.css
+
 1.24.2_0/css/dyna-rules.css
+
 1.24.2_0/css/fa-icons.css
+
 1.24.2_0/css/logger-ui.css
+
 1.24.2_0/css/popup.css
+
 1.24.2_0/css/settings.css
 
 
