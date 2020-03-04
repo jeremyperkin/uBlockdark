@@ -3,9 +3,17 @@ Dark theme for uBlock Origin
 
 Candidate v.01 has been created.
 
+PLEASE FOLLOW THE BELOW INSTRUCTIONS! -
+
+One person who could not read wiped out their install and lost all their filters.   
+
+r/mvus
+
+Don't be like this user!  Make sure to BACKUP!!
+
 Files that have been altered in someway have only been placed in the repo.
   * Should you wish to use them - just ensure to backup your current copy of the 
-  1.24.2_0 folder in your extension folder.  Afterwards just paste the code in the   files listed - into the appropriate files you currently have.
+  uBLOCK folder found in your extension folder.  Afterwards just paste the code into the appropriate files you currently have.
   
 Note - This is a work in progress. Color scheme and variable names could be changed at any time.   
 
