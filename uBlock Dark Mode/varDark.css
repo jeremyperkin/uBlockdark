@@ -2,22 +2,22 @@
 
 :root {
 /*popup.css*/
---background-popup: #000
---uBlock-enabled: steelblue (728cbb)
---basic-tools-icons: #ccc
---extra-tools-bg: #000
---extra-tools-icons: #888
---header-1: #444
---text-head-1: #eee
---header-2: #888
---text-blocked-vals: #ccc
---firewall-bg: #333
---firewall-text: #eee
+--background-popup: #000;
+--uBlock-enabled: steelblue (728cbb);
+--basic-tools-icons: #ccc;
+--extra-tools-bg: #000;
+--extra-tools-icons: #888;
+--header-1: #444;
+--text-head-1: #eee;
+--header-2: #888;
+--text-blocked-vals: #ccc;
+--firewall-bg: #333;
+--firewall-text: #eee;
 --firewall-text-hover 
---firewall-border: #000
---refresh-icon-fill: #000
---lock-eraser-refresh-bg: #999
---ab-count: #888
+--firewall-border: #000;
+--refresh-icon-fill: #000;
+--lock-eraser-refresh-bg: #999;
+--ab-count: #888;
 /*dashboard.css*/
 --dashboard-navbar-bg: #000;
 --dashboard-nav-bar: #ccc;
